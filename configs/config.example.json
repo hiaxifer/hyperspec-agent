@@ -1,0 +1,24 @@
+{
+    "mcpServers": {
+        "IO": {
+            "command": "python",
+            "args": ["agent/tools/io_tools.py", "--temp_dir", "tmp/out"]
+        }
+    },
+    "models": [
+        {
+            "config_name": "qwen35-local",
+            "model_type": "openai_chat",
+            "model_name": "Qwen3.5-9B",
+            "api_key": "EMPTY",
+            "client_args": {
+                "base_url": "http://127.0.0.1:18080/v1"
+            },
+            "generate_args": {
+                "chat_template_kwargs": {
+                    "enable_thinking": false
+                }
+            }
+        }
+    ]
+}

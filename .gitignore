@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 数据与产物（大文件一律不入库，但保留本目录的说明文件）
+data/*
+!data/README.md
+*.tif
+*.tiff
+*.img
+*.hdr
+*.h5
+*.npy
+*.npz
+*.zarr
+tmp/
+out/
+runs/
+case_runs/
+
+# 密钥与本地配置
+.env
+configs/config.json
+configs/config_*.json
+!configs/config.example.json
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store

@@ -1,0 +1,21 @@
+# LLM Agent 栈（版本沿用 Earth-Agent 实测可用的组合，勿随意升大版本）
+langchain==0.3.27
+langgraph-prebuilt==0.6.4
+langchain-mcp-adapters==0.1.9
+langchain-openai==0.3.32
+fastmcp==2.11.3
+mcp==1.12.4
+openai
+
+# 必须手动锁版本（pip 自动解析会装出不兼容组合）
+pydantic>=2.11,<2.12     # 2.12+ 删了 mcp 1.12.4 依赖的内部函数
+langgraph>=0.6,<1.0      # 1.x 移动了 langgraph._internal 模块
+
+# 高光谱 / 遥感处理栈
+numpy
+scipy
+spectral               # 经典高光谱 python 库（ENVI 格式读写、SPIE 光谱工具）
+rasterio               # GeoTIFF 读写
+pyproj
+matplotlib
+tqdm
